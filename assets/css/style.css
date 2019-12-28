@@ -1,0 +1,353 @@
+/*
+  RESET
+*/
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: #333;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.11);
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+input::-webkit-input-placeholder,
+input:-moz-placeholder {
+  color: #3f3f3f;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+/*
+  UTILS
+*/
+
+.img-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 20px 0;
+}
+
+.super-headline {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+.headline {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.sub-headline {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.hidden-mobile {
+  display: none;
+}
+.btn {
+  border: 0;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #333;
+  box-shadow: 0 6px 9px 0 rgba(244, 214, 58, 0.59);
+  cursor: pointer;
+}
+.btn > img {
+  margin-right: 10px;
+}
+.btn-outlined {
+  background-color: transparent;
+  border: 2px solid #333;
+}
+.btn-primary {
+  background-image: linear-gradient(119deg, #fceb6f 9%, #fede60 84%);
+  color: #333;
+  font-size: 20px;
+}
+/*
+  GRID
+*/
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*
+  SECTION: HELLO WORLD
+*/
+.hello-world {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(119deg, #fceb6f 9%, #fede60 84%);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+.menu {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.menu-link {
+  font-size: 15px;
+  color: #333;
+}
+
+.app-download {
+  margin-top: 30px;
+}
+
+/*
+  SECTION: HOW IT WORKS
+*/
+
+.how-it-works {
+  width: 100%;
+}
+.how-it-works > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.how-it-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.how-it-works .icon {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+/*
+  SECTION: Download and play
+*/
+.download-and-play {
+  background-color: #f8f8f8;
+}
+
+/*
+  SECTION: JOIN US NOW
+*/
+.join-us .super-headline,
+.join-us p {
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #2a2a2a;
+  padding: 30px 0;
+}
+
+.footer .menu-link {
+  color: #fff;
+}
+.footer img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer p {
+  color: #8f8f8f;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+/*
+  RESPONSIVE
+*/
+
+@media (min-width: 768px) {
+  /*
+    UTILS
+  */
+  .hidden-mobile {
+    display: block;
+  }
+
+  /*
+    GRID
+  */
+  .row {
+    width: 100%;
+    display: flex;
+    margin: 0 15px;
+    flex-wrap: wrap;
+  }
+  .row:after {
+    display: table;
+    content: "";
+  }
+  .col {
+    padding: 0 15px;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-4 {
+    width: 33.333%;
+  }
+
+  /*
+    SECTION: HELLO WORLD
+  */
+  .hello-world {
+    padding-bottom: 0;
+    min-height: auto;
+  }
+  .menu-link {
+    font-size: 20px;
+  }
+  .menu {
+    margin: 20px;
+  }
+  .img-max-width {
+    max-width: 80%;
+  }
+  .box-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hello-world .box-app {
+    align-items: flex-end;
+  }
+  .hello-world .space-bottom {
+    padding-bottom: 40px;
+  }
+  .row-center {
+    height: 70vh;
+    align-items: center;
+  }
+
+  /*
+    SECTION: HOW IT WORKS
+  */
+  .how-it-works .icon {
+    width: auto;
+  }
+  .how-it-header .sub-headline {
+    text-align: center;
+  }
+  .how-it-box-img {
+    height: 210px;
+  }
+  .how-it-works .app-download {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+  }
+  .how-it-works .app-download .btn {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 150px;
+  }
+  .menu {
+    width: 500px;
+  }
+  .hello-world .app-download {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+  }
+  .hello-world .app-download .btn {
+    width: 180px;
+  }
+  .mask {
+    width: 120px;
+    height: 100%;
+    position: absolute;
+    background-color: #fceb6f;
+    top: 0;
+    left: 50px;
+    z-index: 1;
+    opacity: 0.7;
+  }
+  .mask-overflow {
+    position: relative;
+  }
+  .mask-relative {
+    position: relative;
+    z-index: 2;
+  }
+
+  .join-us .container {
+    width: 700px;
+    margin: 50px auto;
+  }
+  .join-us form {
+    display: flex;
+    align-items: center;
+  }
+  .join-us form input {
+    margin-right: 30px;
+  }
+
+  .footer .menu {
+    margin: 20px auto;
+  }
+
+  .headline {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  body {
+    font-size: 25px;
+  }
+}
